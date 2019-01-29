@@ -1,0 +1,197 @@
+{% extends "ShopAdmin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_name }}{% endblock %}
+
+{% block body %}
+
+  <div class="page-container">
+    {% set active_list_item = 'index' %}
+    {{ include('ShopAdmin/templates/side-menu.html') }}
+
+    <main class="page-main">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-12">
+
+            <h1 class="page-title">{{ title }}</h1>
+
+            <p>Если вы используете одну из распространённых e-commerce систем, вам не нужно разбираться в подробностях.
+              Загрузите соответствующий плагин, введите идентификатор магазина и секретный ключ магазина. И всё
+              заработает
+              само.</p>
+
+            <div class="integration-plugins-carousel">
+              <div id="js-sliderIntegrationPluginPrevBtn"
+                   class="integration-plugins-carousel__btn integration-plugins-carousel__btn_prev">
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+              </div>
+              <div id="js-sliderIntegrationPluginNextBtn"
+                   class="integration-plugins-carousel__btn integration-plugins-carousel__btn_next">
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+              </div>
+
+              <div id="js-sliderIntegrationPlugin" class="swiper-container">
+                <div class="swiper-wrapper d-flex align-items-center">
+                  {% for plugin in plugins %}
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <div class="integration-plugins-carousel__item">
+                        <a href="{{ plugin.url }}" target="_blank" rel="noopener">
+                          <img src="{{ plugin.img_url }}" alt="{{ plugin.name }}">
+                        </a>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+
+              </div>
+            </div><!-- .integration-plugins-carousel -->
+
+            <h6>Данные для интеграции</h6>
+
+            <ul>
+              <li>Ваш id: <b>{{ shop_id }}</b></li>
+              <li>Ваш секретный ключ: <b>{{ secret_key }}</b></li>
+            </ul>
+
+            <h6>Как работает кнопка "Купить в кредит"</h6>
+
+            <p>Если ваш сайт разработан индивидуально, вам нужно будет самостоятельно установить код кнопки.</p>
+            <p>Вы должны установить кнопку на страницу завершения заказа. В качестве параметров нужно передать по адресу
+              {{ site_url }}/phone-number массив POST-параметров, как в примере ниже.</p>
+
+            <div class="bg-white mb-3 p-3">
+<pre class="mb-0"><code>[
+  'shop_id' => 1,
+  'order_id' => 1,
+  'order_price' => 69999,
+  'callback_url' => 'https://www.apple.com/',
+  'is_loan_deferred' => 0,
+  'goods' => 'a:1:{i:0;a:3:{s:4:"name";s:14:"Apple iPhone X";s:5:"price";i:69990;s:6:"amount";i:1;}}'
+  'control' => '$dfj&*7sljklsjflaowrjljafl4'
+]</code></pre>
+            </div>
+
+            <ul>
+              <li>shop_id - идентификатор вашего магазина в системе Bliss;</li>
+              <li>order_id - индентификатор заказа на вашем сайте;</li>
+              <li>order_price - сумма заказа в рублях, на которую запрашивается кредит;</li>
+              <li>callback_url - адрес страницы, на которую должен быть переадресован пользователь после успешного
+                оформления заказа;
+              </li>
+              <li>is_loan_deferred - является ли кредит отложенным (в случае, если данный заказ отправляется Почтой
+                России). Если да - 1, нет - 0;
+              </li>
+              <li>goods - сериализованный массив товаров. Каждый товар - это массив со следующими параметрами:
+                <ul>
+                  <li>name - название;</li>
+                  <li>price - цена в рублях;</li>
+                  <li>amount - количество.</li>
+                </ul>
+              </li>
+              <li>control - поле, введёное для безопасности. Содержит хэш, рассчитанный с помощью PHP по формуле,
+                указанной
+                ниже.
+              </li>
+            </ul>
+
+            <div class="bg-white p-3 mb-3">
+              <pre class="mb-0"><code>&lt;?php md5($shop_id . $order_id . $order_price . $callback_url . $is_loan_deferred . $goods . $secret_key); ?&gt;</code></pre>
+            </div>
+
+            <ul>
+              <li>secret_key - секретный ключ вашего магазина, выданный системой Bliss.</li>
+            </ul>
+
+            <p>При удачном оформлении заказа пользователь будет переадресован на выбранную вами страницу. В качестве
+              POST-параметра response мы передадим JSON-объект в следующем формате:</p>
+
+            <div class="bg-white p-3 mb-3">
+<pre class="mb-0"><code>{
+  "order_id": 1,
+  "request_id": 1,
+  "status": "approved",
+  "timestamp": 15816384658153,
+  "control": "dfsl$%4jljsdf56sldfjdDF"
+}</code></pre>
+            </div>
+
+            <ul>
+              <li>order_id - индентификатор заказа в вашем мазазине;</li>
+              <li>request_id - индентификатор заявки на кредит;</li>
+              <li>status - статус кредита. Должен быть approved - одобрен.</li>
+              <li>timestamp - метка системного времени Unix, когда выдали кредит;</li>
+              <li>control - поле, введёное для безопасности.</li>
+            </ul>
+
+            <p>После получения данных необходимо произвести проверку следующим образом:</p>
+
+            <div class="bg-white p-3 mb-3">
+<pre class="mb-0"><code>&lt;?php
+
+$response = $_POST['response'];
+
+if($response['control'] === md5($response['order_id'] . $response['request_id'] . $response['status'] . $response['timestamp'] . $secret_key)) {
+  //проверка пройдена
+}</code></pre>
+            </div>
+
+            <ul>
+              <li>secret_key - секретный ключ вашего магазина, выданный системой Bliss.</li>
+            </ul>
+
+            <h6>Пример размещения кнопки на сайта</h6>
+
+            <div class="bg-white p-3 mb-3">
+<pre class="mb-0"><code>&lt;?php
+
+$shop_id          = {{ shop_id }};
+$order_id         = 1;
+$order_price      = 71990;
+$callback_url     = 'https://www.apple.com/';
+$is_loan_deferred = 0;
+$goods            = [
+  [
+    'name'   => 'Apple iPhone X',
+    'price'  => 69990,
+    'amount' => 1
+  ],
+  [
+    'name'   => 'Safety glass for Apple iPhone X',
+    'price'  => 2000,
+    'amount' => 1
+  ]
+];
+$goods_serialized = serialize( $goods );
+$secret_key       = '{{ secret_key }}';
+$control          = md5( $shop_id . $order_id . $order_price . $callback_url . $is_loan_deferred . $goods_serialized . $secret_key );
+?&gt;
+
+&lt;form method="post" action="{{ site_url }}/phone-number" enctype="multipart/form-data"&gt;
+  &lt;input name="shop_id" type="hidden" value="&lt;?php echo $shop_id; ?&gt;"&gt;
+  &lt;input name="order_id" type="hidden" value="&lt;?php echo $order_id; ?&gt;"&gt;
+  &lt;input name="order_price" type="hidden" value="&lt;?php echo $order_price; ?&gt;"&gt;
+  &lt;input name="callback_url" type="hidden" value="&lt;?php echo $callback_url; ?&gt;"&gt;
+  &lt;input name="is_loan_deferred" type="hidden" value="&lt;?php echo $is_loan_deferred; ?&gt;"&gt;
+  &lt;input name="goods" type="hidden" value="&lt;?php echo $goods_serialized; ?&gt;"&gt;
+  &lt;input name="control" type="hidden" value="&lt;?php echo $control; ?&gt;"&gt;
+  &lt;button type="submit"&gt;Купить в кредит&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+            </div>
+
+            <h6>Помощь в интеграции</h6>
+
+            <p>Вы можете заказать интеграцию кнопки для вашего сайта в компании Alef Development. Позвоните по телефону
+              <a href="tel:84952302268"> 8 (495) 230-22-68</a> или оставьте заявку по адресу <a
+                href="mailto:contact@alef.im">contact@alef.im</a>.</p>
+
+          </div><!-- .col-md-12 -->
+        </div><!-- .row -->
+
+      </div>
+    </main>
+  </div><!-- .page-content -->
+
+{% endblock %}

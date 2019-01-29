@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} | {{ site_name }}{% endblock %}
+
+{% block body %}
+
+  <div class="page container d-flex flex-column p-sm-0">
+    <div
+      class="header container d-flex flex-column align-items-center flex-sm-row justify-content-sm-between align-items-sm-center mb-4 mb-sm-0 p-0">
+
+      <div
+        class="header__logo logo order-2 order-sm-1 flex-grow-1 d-flex justify-content-start justify-content-md-center">
+        <img src="{{ site_url }}/assets/img/bliss-logotype.png"
+             srcset="{{ site_url }}/assets/img/bliss-logotype@2x.png 2x, {{ site_url }}/assets/img/bliss-logotype@3x.png 3x"
+             width="89" height="102" alt="">
+      </div><!-- header__logo -->
+
+      <div class="header__phone phone order-1 order-sm-2 d-flex align-items-center justify-content-end">
+        <div class="phone__number d-flex align-items-center">
+          <span class="icon icon-phone"></span>
+          <a href="tel:{{ phone_link }}" class="link link_black">{{ phone_number }}</a>
+        </div>
+      </div><!-- header__phone -->
+
+    </div><!-- header -->
+
+    <div class="cancell container message mb-5 p-0">
+      <div class="d-flex flex-column align-items-center">
+
+        <span class="icon icon-close-round"></span>
+
+        <span class="message__title text-center">Кредитные организации отказали</span>
+
+        <span class="message__text text-center mt-3 mb-3">Вы можете узнать причину отказа, заказав выписку
+            в государственном бюро кредитных историй за 50 рублей
+          </span>
+
+        <a href="#" class="btn btn_primary btn_big message__btn" name="code-sms">Смотреть кредитную историю</a>
+
+        <a href="{{ callback_url }}" class="link text-center">Вернуться на сайт магазина</a>
+
+      </div>
+
+    </div><!-- cancel -->
+
+    <div
+      class="footer container d-flex flex-column flex-sm-row justify-content-center justify-content-sm-between align-items-center p-0">
+
+      <div class="footer__logo logo flex-grow-sm-1 d-flex justify-content-sm-start mb-4 mb-sm-0">
+        <img src="{{ site_url }}/assets/img/bliss-logotype-txt.png"
+             srcset="{{ site_url }}/assets/img/bliss-logotype-txt@2x.png 2x, assets/img/bliss-logotype-txt@3x.png 3x"
+             width="152" height="44" alt="">
+      </div><!-- header__logo -->
+
+      <div class="footer__phone phone d-flex align-items-center justify-content-end">
+        <div class="phone__number d-flex align-items-center">
+          <span class="icon icon-phone"></span>
+          <a href="tel:{{ phone_link }}" class="link link_black">{{ phone_number }}</a>
+        </div>
+      </div><!-- header__phone -->
+
+    </div><!-- footer -->
+
+  </div><!-- page-content -->
+
+{% endblock %}

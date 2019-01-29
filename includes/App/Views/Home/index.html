@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block body %}
+
+<div class="page container d-flex flex-column p-sm-0">
+  <div
+    class="header container d-flex flex-column align-items-center flex-sm-row justify-content-sm-between align-items-sm-center mb-4 mb-sm-0 p-0">
+
+    <div
+      class="header__logo logo order-2 order-sm-1 flex-grow-1 d-flex justify-content-start justify-content-md-center">
+      <img src="{{site_url}}/assets/img/bliss-logotype.png"
+           srcset="{{site_url}}/assets/img/bliss-logotype@2x.png 2x, assets/img/bliss-logotype@3x.png 3x"
+           width="89" height="102" alt="">
+    </div><!-- header__logo -->
+
+    <div class="header__phone phone order-1 order-sm-2 d-flex align-items-center justify-content-end">
+      <div class="phone__number d-flex align-items-center">
+        <span class="icon icon-phone"></span>
+        <a href="tel:{{phone_link}}" class="link link_black">{{phone_number}}</a>
+      </div>
+    </div><!-- header__phone -->
+
+  </div><!-- header -->
+
+  <div class="menu container p-0">
+
+    <h1 class="menu__title title d-flex flex-column align-items-center">
+      <span class="title_bold">Сервис мгновенной выдачи кредитов</span>
+      <span class="title_light">для клиентов вашего интернет-магазина</span>
+    </h1><!-- menu__title -->
+
+    <div class="menu__register register d-flex flex-column align-items-center">
+      <a href="{{site_url}}/profile-shop" class="btn btn_primary btn_big register__btn mb-4">Зарегистрироваться</a>
+      <a href="{{site_url}}/shop-admin/integration" class="register__link link link_bold link_uppercase">У меня уже есть аккаунт</a>
+    </div>
+
+    <div
+      class="menu__list list d-flex flex-column  align-items-center flex-sm-row align-items-sm-center justify-content-sm-between">
+
+      <a href="javascript:void(0)"
+         class="list__item check btn btn_primary btn_round d-flex flex-column align-items-center justify-content-center mb-4 mb-sm-0">
+        <span class="icon icon-receipt mb-2 mb-md-4"></span>
+        <span class="name">Увеличение<br> чека</span>
+      </a>
+
+      <a href="javascript:void(0)"
+         class="list__item conversion btn btn_primary btn_round d-flex flex-column align-items-center justify-content-center mb-4 mb-sm-0">
+        <span class="icon icon-conversion mb-2 mb-md-4"></span>
+        <span class="name">Увеличение конверсии</span>
+      </a>
+
+      <a href="javascript:void(0)"
+         class="list__item return btn btn_primary btn_round d-flex flex-column align-items-center justify-content-center">
+        <span class="icon icon-return mb-2 mb-md-4"></span>
+        <span class="name">Снижение возвратов</span>
+      </a>
+
+    </div><!-- menu__list -->
+
+  </div><!-- menu -->
+
+  <div class="swiper slider container p-0">
+
+    <div class="swiper-container">
+
+      <div class="slider__header d-flex justify-content-center">
+        <span class="slider__title">Нам доверяют</span>
+      </div>
+
+      <div class="swiper-button-prev slider__prev">
+        <span class="icon icon-prev"></span>
+        <span class="slider__prev-name">Prev</span>
+      </div>
+      <div class="swiper-button-next slider__next">
+        <span class="icon icon-next"></span>
+        <span class="slider__next-name">Next</span>
+      </div>
+
+      <div class="swiper-wrapper slider__wrapper d-flex align-items-center">
+        {% for partner in partners %}
+        <div class="swiper-slide">
+          <div class="slider__item slide slide_post d-flex justify-content-center">
+            <a href="{{partner.url}}" target="_blank" rel="noopener">
+              <img src="{{partner.img_url}}" alt="{{partner.name}}">
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div><!-- swiper -->
+
+  </div><!-- slider -->
+
+  <div class="description container d-flex flex-column p-0">
+
+    <div class="description__first-paragraph paragraph text-left text-sm-center text-xl-left order-2">
+      <span class="paragraph__title paragraph__title_bigger-font d-block">Наши преимущества:</span>
+      <span class="paragraph__text d-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+      <a href="{{site_url}}/profile-shop" class="btn btn_primary btn_big description__btn">Зарегистрироваться</a>
+    </div>
+
+    <div class="description__phone-img order-1">
+      <img src="{{site_url}}/assets/img/rectangle-1.png" srcset="{{site_url}}/assets/img/rectangle-1@2x.png 2x, {{site_url}}/assets/img/rectangle-1@3x.png 3x"
+           width="606"
+           height="359" alt="Phone">
+    </div>
+
+    <div class="description__second-paragraph paragraph text-left text-xl-right mt-5 mt-xl-0 order-4">
+      <span class="paragraph__title d-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore </span>
+      <span class="paragraph__text d-block">magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+    </div>
+
+    <div class="description__laptop-img order-3">
+      <img src="{{site_url}}/assets/img/rectangle-2.png" srcset="{{site_url}}/assets/img/rectangle-2@2x.png 2x, {{site_url}}/assets/img/rectangle-2@3x.png 3x"
+           width="606"
+           height="359" alt="Laptop">
+    </div>
+
+  </div><!-- descr -->
+
+  <div
+    class="footer container footer_high d-flex flex-column flex-sm-row justify-content-center justify-content-sm-between align-items-center p-0">
+
+    <div class="footer__logo logo flex-grow-sm-1 d-flex justify-content-sm-start mb-4 mb-sm-0">
+      <img src="{{site_url}}/assets/img/bliss-logotype-txt.png"
+           srcset="{{site_url}}/assets/img/bliss-logotype-txt@2x.png 2x, {{site_url}}/assets/img/bliss-logotype-txt@3x.png 3x" width="152" height="44" alt="">
+    </div><!-- header__logo -->
+
+    <div class="footer__phone phone d-flex align-items-center justify-content-end">
+      <div class="phone__number d-flex align-items-center">
+        <span class="icon icon-phone"></span>
+        <a href="tel:{{phone_link}}" class="link link_black">{{phone_number}}</a>
+      </div>
+    </div><!-- header__phone -->
+
+  </div><!-- footer -->
+
+</div><!-- page-content -->
+
+{% endblock %}

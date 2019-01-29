@@ -1,0 +1,53 @@
+<div id="js-sideMenu" class="side-menu">
+
+  <button id="js-sideMenuToggleButton" class="btn side-menu__toggle-btn">
+    <i class="fas fa-bars" aria-hidden="true"></i>
+    <i class="fas fa-times" aria-hidden="true"></i>
+  </button>
+
+  <div class="side-menu__inner">
+    <div class="side-menu__logo">
+      <span class="side-menu__logo-text">{{ site_name }}</span>
+    </div>
+
+    <ul class="side-menu__list">
+      <li class="side-menu__list-item">
+        <a
+          class="side-menu__list-item-link {% if active_list_item == 'index' %}side-menu__list-item-link_active{% endif %}"
+          href="{{ site_url }}/shop-admin/integration">
+          <i class="fas fa-code side-menu__list-item-icon" aria-hidden="true"></i>Код кнопки</a>
+      </li>
+      <li class="side-menu__list-item">
+        <a
+          class="side-menu__list-item-link {% if active_list_item == 'history' %}side-menu__list-item-link_active{% endif %}"
+          href="{{ site_url }}/shop-admin/history">
+          <i class="fas fa-history side-menu__list-item-icon" aria-hidden="true"></i>История</a>
+      </li>
+      {% if current_role == 'admin' %}
+        <li class="side-menu__list-item">
+          <a
+            class="side-menu__list-item-link {% if active_list_item == 'requisites' %}side-menu__list-item-link_active{% endif %}"
+            href="{{ site_url }}/shop-admin/requisites">
+            <i class="fas fa-info-circle side-menu__list-item-icon" aria-hidden="true"></i>Реквизиты</a>
+        </li>
+        <li class="side-menu__list-item">
+          <a
+            class="side-menu__list-item-link {% if active_list_item == 'staff' %}side-menu__list-item-link_active{% endif %}"
+            href="{{ site_url }}/shop-admin/staff">
+            <i class="fas fa-user-circle side-menu__list-item-icon" aria-hidden="true"></i>Персонал</a>
+        </li>
+      {% endif %}
+      <li class="side-menu__list-item">
+        <a class="side-menu__list-item-link" href="{{ site_url }}/shop-admin/login">
+          <i class="fas fa-power-off side-menu__list-item-icon" aria-hidden="true"></i>Выход</a>
+      </li>
+    </ul>
+
+    <div class="side-menu__alef-logo">
+      <a href="http://l.alef.im/" target="_blank">
+        <img src="http://l.alef.im/img/logo-black.svg" alt="logo" width="109" height="35">
+      </a>
+    </div>
+  </div>
+
+</div>

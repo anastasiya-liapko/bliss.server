@@ -1,0 +1,120 @@
+{% extends "ShopAdmin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_name }}{% endblock %}
+
+{% block body %}
+
+  <div class="page-container">
+    {% set active_list_item = 'history' %}
+    {{ include('ShopAdmin/templates/side-menu.html') }}
+
+    <main class="page-main">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="page-title">{{ title }}</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+
+            <form id="js-formEditRequest" class="form bg-white p-4" action="{{ form_action }}" method="post"
+                  enctype="multipart/form-data">
+              <div class="form-group mb-4">
+                <label for="js-formEditRequestInputId">Номер заявки</label>
+                <input id="js-formEditRequestInputId" class="form-control form-control-lg" type="text"
+                       value="{{ request.id }}" readonly>
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="js-formEditRequestInputTimeStart">Дата подачи</label>
+                <input id="js-formEditRequestInputTimeStart" class="form-control form-control-lg" type="text"
+                       value="{{ request.time_start|date('d.m.Y h:m:s') }}" readonly>
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="js-formEditRequestInputOrderPrice">Сумма</label>
+                <input id="js-formEditRequestInputOrderPrice" class="form-control form-control-lg" type="text"
+                       value="{{ request.order_price|number_format(2, '.', ' ')|default('-') }}" readonly>
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="js-formEditRequestInputOrderId">Номер заказа</label>
+                <input id="js-formEditRequestInputOrderId" class="form-control form-control-lg" type="text"
+                       value="{{ request.order_id|default('-') }}" readonly>
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="js-formEditRequestInputStatus">Статус</label>
+                {% if request.status == 'pending' %}
+                  {% set status = 'В процессе' %}
+                {% elseif request.status == 'approved' %}
+                  {% set status = 'Одобрена' %}
+                {% elseif request.status == 'declined' %}
+                  {% set status = 'Отклонена' %}
+                {% elseif request.status == 'cancel' %}
+                  {% set status = 'Отменена клиентом' %}
+                {% elseif request.status == 'manual' %}
+                  {% set status = 'Требует решения' %}
+                {% else %}
+                  {% set status = '-' %}
+                {% endif %}
+                <input id="js-formEditRequestInputStatus" class="form-control form-control-lg" type="text"
+                       value="{{ status }}" readonly>
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="js-formEditRequestInputIsLoanDeferred">Кредит отложенный</label>
+                {% if request.is_loan_deferred == 1 %}
+                  {% set is_loan_deferred = 'да' %}
+                {% else %}
+                  {% set is_loan_deferred = 'нет' %}
+                {% endif %}
+                <input id="js-formEditRequestInputIsLoanDeferred" class="form-control form-control-lg" type="text"
+                       value="{{ is_loan_deferred }}" readonly>
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="js-formEditRequestInputIsLoanReceived">Деньги получены</label>
+                {% if request.is_loan_received == 1 %}
+                  {% set is_loan_received = 'да' %}
+                {% else %}
+                  {% set is_loan_received = 'нет' %}
+                {% endif %}
+                <input id="js-formEditRequestInputIsLoanReceived" class="form-control form-control-lg" type="text"
+                       value="{{ is_loan_received }}" readonly>
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="js-formEditRequestInputIsOrderReceived">Товар получен</label>
+                {% if request.is_order_received == 1 %}
+                  {% set is_order_received = 'да' %}
+                {% else %}
+                  {% set is_order_received = 'нет' %}
+                {% endif %}
+                <input id="js-formEditRequestInputIsOrderReceived" class="form-control form-control-lg" type="text"
+                       value="{{ is_order_received }}" readonly>
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="js-formEditRequestInputTrackingId">Код отслеживания посылки</label>
+                <input id="js-formEditRequestInputTrackingId" class="form-control form-control-lg" type="text" name="tracking_id"
+                       value="{{ request.tracking_id }}">
+              </div>
+
+              <div class="form-group mb-0">
+                <button id="js-formEditRequestBtnSubmit" class="btn btn-primary" type="submit">Сохранить</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+  <!-- page-content -->
+
+{% endblock %}

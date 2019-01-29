@@ -1,0 +1,25 @@
+# Remove the question mark from the request but maintain the query string
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+    RewriteEngine On
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_URI} ^/.*
+    RewriteRule ^(.*)$ public/$1 [L]
+
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteCond %{REQUEST_FILENAME} !-f [OR]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^.*$ public/index.php
+</IfModule>
+
+SetEnvIf Host bliss.alef.im passreq
+AuthType Basic
+AuthName "Thats protected Area!"
+AuthUserFile /var/www/diesel_api/data/www/bliss.alef.im/.htpasswd
+Require valid-user
+Order allow,deny
+Allow from all
+Deny from env=passreq
+Satisfy any

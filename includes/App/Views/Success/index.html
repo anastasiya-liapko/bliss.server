@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} | {{ site_name }}{% endblock %}
+
+{% block body %}
+
+  <div class="page container d-flex flex-column p-sm-0">
+    <div
+      class="header container d-flex flex-column align-items-center flex-sm-row justify-content-sm-between align-items-sm-center mb-4 mb-sm-0 p-0">
+
+      <div
+        class="header__logo logo order-2 order-sm-1 flex-grow-1 d-flex justify-content-start justify-content-md-center">
+        <img src="{{ site_url }}/assets/img/bliss-logotype.png"
+             srcset="{{ site_url }}/assets/img/bliss-logotype@2x.png 2x, {{ site_url }}/assets/img/bliss-logotype@3x.png 3x"
+             width="89" height="102" alt="">
+      </div><!-- header__logo -->
+
+      <div class="header__phone phone order-1 order-sm-2 d-flex align-items-center justify-content-end">
+        <div class="phone__number d-flex align-items-center">
+          <span class="icon icon-phone"></span>
+          <a href="tel:{{ phone_link }}" class="link link_black">{{ phone_number }}</a>
+        </div>
+      </div><!-- header__phone -->
+
+    </div><!-- header -->
+
+    <div class="done container message mb-5 p-0">
+      <div class="d-flex flex-column align-items-center">
+
+        <span class="icon icon-check-round"></span>
+
+        <span class="message__title text-center">Вам одобрили кредит</span>
+
+        <span class="done__text message__text text-center mt-4">Кредит на вашу покупку одобрила компания «Быстрые деньги»</span>
+
+        <a href="#" class="document link link_black text-center mt-4">Ознакомиться с условиями кредитования</a>
+
+        <span class="done__text message__text hide text-center mt-4">Ссылка на договор отправлена вам в СМС</span>
+
+        <div class="done__credit-descr mt-4">
+          <div class="text-center">
+            <span class="done__text message__text text-center mt-3 mb-3">Срок кредита: </span>
+            <span class="done__text message__text message__text_black d-block d-sm-inline text-center mt-sm-3 mb-2 mb-sm-3">6 месяцев</span>
+          </div>
+
+          <div class="text-center">
+            <span class="done__text message__text text-center mt-3 mb-3">Полная стоймость займа: </span>
+            <span class="done__text message__text message__text_black d-block d-sm-inline text-center mt-sm-3 mb-2 mb-sm-3">3000 рублей</span>
+          </div>
+
+          <div class="text-center">
+            <span class="done__text message__text text-center mt-3 mb-3">Процентная ставка в день: </span>
+            <span class="done__text message__text message__text_black d-block d-sm-inline text-center mt-sm-3 mb-2 mb-sm-3">0.005%</span>
+          </div>
+        </div><!-- done__credit-descr -->
+
+      </div>
+
+    </div><!-- done -->
+
+
+    <div class="code-sms message container mt-4 mb-2 p-0">
+      <div class="d-flex flex-column align-items-center">
+
+        <span class="done__text message__text message__text_width text-center mb-3">Остался последний шаг: ввести код из смс и ваш заказ будет оплачен.</span>
+
+        <form id="js-formCodeSms" class="d-flex flex-column align-items-center w-100 w-sm-auto"
+              action="{{ form_action }}"
+              method="post" enctype="multipart/form-data">
+
+          <label for="js-formCodeSmsInputCode" class="message__title text-center mb-0">Введите код из смс</label>
+          <!-- <input id="js-formCodeSmsInputCode" class="message__input input mt-3" name="sms_code" type="text"
+                 pattern="[0-9]*" placeholder="****" required> -->
+
+          <div class="asterisks text-center position-relative mt-3">
+            <span id="js-formCodeSmsInputAsterisks" class="asterisks__placeholder d-block position-absolute"></span>
+            <input id="js-formCodeSmsInputCode" class="asterisks__input message__input input mt-0" name="sms_code" type="text"
+                 pattern="[0-9]*" placeholder="****" required>
+          </div><!-- asterisks -->
+
+          <div class="message__text message__text_width message__text_height code-sms__info text-center mt-3 position-relative">
+            
+            <div id="js-codeSmsTimerShow" class="code-sms__timer hide position-absolute">
+              <span>Запросить повторно код в СМС возможно через </span>
+              <span id="js-codeSmsTimer" class="d-inline-block" data-timer-end="{{ timer_end }}"></span>
+            </div>
+
+            <div id="js-codeSmsRepeatShow" class="code-sms__repeat">
+              <a id="js-codeSmsRepeatSend" href="javascript:void(0);" class="link link_disabled text-center"
+                 data-link-action="{{ link_action }}">Отправить</a>
+              <span> СМС повторно.</span>
+            </div>
+
+          </div>
+
+          <button id="js-formCodeSmsBtnSubmit" class="btn btn_primary btn_big message__btn mt-4 mb-4" type="submit" disabled>
+            Завершить оплату
+          </button>
+
+          <a href="#" class="document link link_black text-center">Отказаться от оплаты</a>
+
+        </form>
+
+      </div>
+
+    </div><!-- code-sms -->
+
+
+    <div
+      class="footer container d-flex flex-column flex-sm-row justify-content-center justify-content-sm-between align-items-center p-0">
+
+      <div class="footer__logo logo flex-grow-sm-1 d-flex justify-content-sm-start mb-4 mb-sm-0">
+        <img src="{{ site_url }}/assets/img/bliss-logotype-txt.png"
+             srcset="assets/img/bliss-logotype-txt@2x.png 2x, {{ site_url }}/assets/img/bliss-logotype-txt@3x.png 3x"
+             width="152" height="44" alt="">
+      </div><!-- header__logo -->
+
+      <div class="footer__phone phone d-flex align-items-center justify-content-end">
+        <div class="phone__number d-flex align-items-center">
+          <span class="icon icon-phone"></span>
+          <a href="tel:{{ phone_link }}" class="link link_black">{{ phone_number }}</a>
+        </div>
+      </div><!-- header__phone -->
+
+    </div><!-- footer -->
+
+  </div><!-- page-content -->
+
+{% endblock %}

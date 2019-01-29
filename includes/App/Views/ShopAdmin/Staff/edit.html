@@ -1,0 +1,77 @@
+{% extends "ShopAdmin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_name }}{% endblock %}
+
+{% block body %}
+
+  <div class="page-container">
+    {% set active_list_item = 'staff' %}
+    {{ include('ShopAdmin/templates/side-menu.html') }}
+
+    <main class="page-main">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="page-title">{{ title }}</h1>
+          </div>
+        </div>
+
+        <div class="row bg-white pt-3">
+          <div class="col-md-12">
+
+            <form id="js-formEditAdmin" class="form" action="{{ form_action }}" method="post"
+                  enctype="multipart/form-data" autocomplete="off">
+
+              <div class="form-group mb-4">
+                <label for="js-formEditAdminInputName">Имя</label>
+                <input id="js-formEditAdminInputName" class="form-control form-control-lg" type="text" name="name"
+                       value="{{ name }}" required>
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="js-formEditAdminInputEmail">Email</label>
+                <input id="js-formEditAdminInputEmail" class="form-control form-control-lg" type="email" name="email"
+                       value="{{ email }}" required>
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="js-formEditAdminInputPassword">Пароль</label>
+                <input id="js-formEditAdminInputPassword" class="form-control form-control-lg" type="password"
+                       name="password" value="{{ password_hash }}" required>
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="js-formEditAdminInputPhone">Телефон</label>
+                <input id="js-formEditAdminInputPhone" class="form-control form-control-lg" type="tel" name="phone"
+                       value="{{ phone }}">
+              </div>
+
+              {% if role != 'admin' %}
+                <div class="form-group mb-4">
+                  <label for="js-formEditAdminInputActive">Активирован</label>
+                  <select id="js-formEditAdminInputActive" class="form-control form-control-lg" type="tel" name="active"
+                          required>
+                    <option value="1" {% if active == 1 %} selected {% endif %}>да</option>
+                    <option value="0" {% if active == 0 %} selected {% endif %}>нет</option>
+                  </select>
+                </div>
+              {% endif %}
+
+              <div class="form-group mb-4">
+                {% if role == 'admin' %}
+                  <input type="hidden" name="active" value="1">
+                {% endif %}
+                <button id="js-formEditAdminBtnSubmit" class="btn btn-primary" type="submit">Сохранить</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+  <!-- page-content -->
+
+{% endblock %}

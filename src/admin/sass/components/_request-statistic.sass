@@ -1,0 +1,23 @@
+.request-statistic
+  margin-bottom: 70px
+  font-family: 'Montserrat', sans-serif
+
+.request-statistic__item
+  margin-bottom: 8px
+  white-space: nowrap
+
+.request-statistic__number
+  font-size: 18px
+
+.request-statistic__status
+
+  &_pending
+    color: $danger-color
+
+  &_approved
+    color: $success-color
+
+  &_declined,
+  &_cancel,
+  &_manual
+    color: $error-color

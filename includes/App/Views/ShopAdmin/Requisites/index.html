@@ -1,0 +1,82 @@
+{% extends "ShopAdmin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_name }}{% endblock %}
+
+{% block body %}
+
+  <div class="page-container">
+    {% set active_list_item = 'requisites' %}
+    {{ include('ShopAdmin/templates/side-menu.html') }}
+
+    <main class="page-main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+            <h1 class="page-title">{{ title }}</h1>
+
+            <p><strong>Внимание! При изменении реквизитов магазин переходит в статус "не активен". Как только
+                администратор системы Bliss проверит данные, он активирует магазин.</strong></p>
+
+            <p>Статус магазина: <strong>{{ status }}</strong></p>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+
+            <form id="js-formEditShop" class="form bg-white p-4" action="{{ form_action }}" method="post"
+                  enctype="multipart/form-data">
+              <div class="form-group mb-4">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="type"
+                         id="js-formEditShopInputEntrepreneur"
+                         value="entrepreneur" {% if type == "entrepreneur" %} checked {% endif %}>
+                  <label class="form-check-label" for="js-formEditShopInputEntrepreneur">ИП</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="type" id="js-formEditShopInputLlc"
+                         value="llc" {% if type == "llc" %} checked {% endif %}>
+                  <label class="form-check-label" for="js-formEditShopInputLlc">ООО</label>
+                </div>
+              </div>
+              <div class="form-group mb-4">
+                <label for="js-formEditShopInputLastName">Фамилия директора</label>
+                <input id="js-formEditShopInputLastName" class="form-control form-control-lg" type="text"
+                       name="last_name" value="{{ last_name }}" required>
+              </div>
+              <div class="form-group mb-4">
+                <label for="js-formEditShopInputFirstName">Имя директора</label>
+                <input id="js-formEditShopInputFirstName" class="form-control form-control-lg" type="text"
+                       name="first_name" value="{{ first_name }}" required>
+              </div>
+              <div class="form-group mb-4">
+                <label for="js-formEditShopInputMiddleName">Отчество директора</label>
+                <input id="js-formEditShopInputMiddleName" class="form-control form-control-lg" type="text"
+                       name="middle_name" value="{{ middle_name }}" required>
+              </div>
+              <div class="form-group mb-4">
+                <label for="js-formEditShopInputTin">ИНН</label>
+                <input id="js-formEditShopInputTin" class="form-control form-control-lg" type="text" name="tin" value="{{ tin }}" placeholder="ИНН"
+                       required>
+              </div>
+              <div class="form-group mb-4">
+                <label for="js-formEditShopInputCompanyName">Название компании</label>
+                <input id="js-formEditShopInputCompanyName" class="form-control form-control-lg" type="text"
+                       name="company_name" value="{{ company_name }}" required>
+              </div>
+              <div class="form-group mb-0">
+                <button id="js-formEditShopBtnSubmit" class="btn btn-primary" type="submit">Сохранить</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+  <!-- page-content -->
+
+{% endblock %}

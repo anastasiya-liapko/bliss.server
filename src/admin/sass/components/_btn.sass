@@ -1,0 +1,27 @@
+.btn
+  font-weight: 500
+  text-transform: uppercase
+
+.btn-primary
+  background-color: $primary-color
+  border-color: $primary-color
+
+  &.disabled,
+  &:disabled
+    background-color: lighten($primary-color, 20%)
+    border-color: lighten($primary-color, 20%)
+
+  &:not(:disabled):not(.disabled):hover
+    background-color: darken($primary-color, 10%)
+    border-color: darken($primary-color, 10%)
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):focus
+    background-color: darken($primary-color, 10%)
+    border-color: darken($primary-color, 10%)
+    box-shadow: 0 0 0 0.2rem rgba(198, 39, 58, .25)
+
+  &:not(:disabled):not(.disabled):active:focus
+    background-color: darken($primary-color, 10%)
+    border-color: darken($primary-color, 10%)
+    box-shadow: none

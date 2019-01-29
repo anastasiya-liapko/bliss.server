@@ -1,0 +1,64 @@
+{% extends "ShopAdmin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_name }}{% endblock %}
+
+{% block body %}
+
+  <div class="page-container">
+    {% set active_list_item = 'staff' %}
+    {{ include('ShopAdmin/templates/side-menu.html') }}
+
+    <main class="page-main">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="page-title">{{ title }}</h1>
+          </div>
+        </div>
+
+        <div class="row bg-white pt-3">
+          <div class="col-md-12">
+
+            <form id="js-formAddAdmin" class="form" action="{{ form_action }}" method="post"
+                  enctype="multipart/form-data" autocomplete="off">
+              <div class="form-group mb-4">
+                <label for="js-formAddAdminInputName">Имя</label>
+                <input id="js-formAddAdminInputName" class="form-control form-control-lg" type="text" name="name"
+                       required>
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="js-formAddAdminInputEmail">Email</label>
+                <input id="js-formAddAdminInputEmail" class="form-control form-control-lg" type="email" name="email"
+                       required>
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="js-formAddAdminInputPhone">Телефон</label>
+                <input id="js-formAddAdminInputPhone" class="form-control form-control-lg" type="tel" name="phone">
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="js-formAddAdminInputActive">Активирован</label>
+                <select id="js-formAddAdminInputActive" class="form-control form-control-lg" type="tel" name="active"
+                        required>
+                  <option value="1">да</option>
+                  <option value="0">нет</option>
+                </select>
+              </div>
+
+              <div class="form-group mb-4">
+                <button id="js-formAddAdminBtnSubmit" class="btn btn-primary" type="submit">Добавить</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+  <!-- page-content -->
+
+{% endblock %}

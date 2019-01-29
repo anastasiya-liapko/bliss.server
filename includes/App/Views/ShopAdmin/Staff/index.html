@@ -1,0 +1,88 @@
+{% extends "ShopAdmin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_name }}{% endblock %}
+
+{% block body %}
+
+  <div class="page-container">
+    {% set active_list_item = 'staff' %}
+    {{ include('ShopAdmin/templates/side-menu.html') }}
+
+    <main class="page-main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="page-title">{{ title }}</h1>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-md-12">
+            <a href="{{ site_url }}/shop-admin/staff/add" class="btn btn-primary">Добавить</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+
+            <div class="table-wrap">
+              <table class="table bg-white">
+                <thead>
+                <tr>
+                  <th></th>
+                  <th>Имя</th>
+                  <th>Email</th>
+                  <th>Телефон</th>
+                  <th>Роль</th>
+                  <th>Активирован</th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for admin in admins %}
+                  <tr id="js-tableRowId{{ admin.id }}">
+                    <td>
+                      <a href="{{ site_url }}/shop-admin/staff/{{ admin.id }}/edit" title="Редактировать">
+                        <i class="fas fa-edit" aria-hidden="true"></i>
+                      </a>
+                    </td>
+                    <td>{{ admin.name|default('-') }}</td>
+                    <td>{{ admin.email|default('-') }}</td>
+                    <td>{{ admin.phone|default('-') }}</td>
+                    <td>
+                      {% if admin.role == 'admin' %}
+                        Администратор
+                      {% elseif admin.role == 'manager' %}
+                        Менеджер
+                      {% endif %}
+                    </td>
+                    <td>
+                      {% if admin.active == 1 %}
+                        да
+                      {% else %}
+                        нет
+                      {% endif %}
+                    </td>
+                    <td>
+                      {% if admin.role != 'admin' %}
+                        <a class="js-deleteAdmin" href="#" data-action="{{ delete_action }}" data-id="{{ admin.id }}"
+                           data-remove-id="#js-tableRowId{{ admin.id }}" title="Удалить">
+                          <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                        </a>
+                      {% endif %}
+                    </td>
+                  </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+  <!-- page-content -->
+
+{% endblock %}

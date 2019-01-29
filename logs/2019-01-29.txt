@@ -1,0 +1,1050 @@
+[29-Jan-2019 15:06:11 UTC] Uncaught exception: 'ErrorException' with message 'Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP)'
+Stack trace: #0 /Applications/MAMP/htdocs/includes/Core/Model.php(21): Core\Error::errorHandler(2, 'Use of undefine...', '/Applications/M...', 21, Array)
+#1 /Applications/MAMP/htdocs/includes/App/Models/Partner.php(149): Core\Model::getDB()
+#2 /Applications/MAMP/htdocs/includes/App/Controllers/Home.php(30): App\Models\Partner::getAll()
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 /Applications/MAMP/htdocs/includes/Core/Controller.php(47): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/includes/Core/Router.php(121): Core\Controller->__call('index', Array)
+#6 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('')
+#7 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Model.php' on line 21
+[29-Jan-2019 15:06:11 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 15:37:53 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 15:38:15 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 15:42:54 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 15:48:34 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 15:51:05 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 15:51:20 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('codeSms')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 15:51:20 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 15:51:30 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('CodeSms')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 15:51:30 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 15:54:35 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 15:54:57 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 15:55:58 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 15:56:12 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 15:56:14 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 15:56:15 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 15:56:16 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 16:10:08 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 16:11:38 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 16:12:28 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 16:13:52 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 16:14:15 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 16:16:01 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 16:18:07 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 16:18:35 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 16:20:37 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 16:21:23 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 16:24:10 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 16:24:45 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:09:21 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:10:44 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:11:27 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:16:15 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:16:35 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:17:10 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:17:27 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:21:52 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:23:11 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:23:51 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:34:50 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:35:15 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:35:28 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:35:44 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:36:17 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:37:30 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:37:55 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:39:55 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:41:41 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:42:13 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:42:45 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:44:07 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:44:17 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:44:41 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:44:57 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:46:49 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:47:27 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:48:21 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:48:42 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:49:51 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:50:30 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:52:51 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:53:41 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:54:31 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:55:42 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:56:32 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:58:11 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:58:30 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 17:59:53 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 18:00:42 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 18:00:45 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 18:00:46 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 18:00:48 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 18:00:49 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 18:12:52 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 18:15:07 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 18:18:10 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 18:23:57 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 18:25:51 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 18:27:56 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:14:00 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:17:25 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:18:30 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:19:38 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:27:11 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:28:08 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:28:49 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:29:21 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:31:35 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:32:35 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:38:45 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:46:23 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:49:06 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:49:50 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:51:55 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:52:31 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:52:58 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:53:28 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:54:13 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:54:53 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 19:57:18 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:02:10 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:03:03 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:07:56 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:09:17 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:10:50 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:14:10 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:17:21 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:18:16 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:18:51 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:19:38 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:22:20 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:22:44 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:23:35 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:24:43 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:26:49 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:28:53 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:29:37 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:29:53 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:31:14 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:31:45 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:47:58 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:49:43 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:50:22 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:50:55 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:51:49 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:52:52 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:53:32 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:54:23 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:55:11 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:55:46 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 20:59:48 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:00:39 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:01:02 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:01:44 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:03:00 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:03:39 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:03:57 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:04:15 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:05:06 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:05:26 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:05:58 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:06:19 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:08:08 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:09:32 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:10:13 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:10:43 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:11:35 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:12:06 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:12:42 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:13:33 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:14:32 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:15:31 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:15:50 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:16:21 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:18:28 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:18:49 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:19:14 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:20:08 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:20:36 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:21:18 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:22:00 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:23:40 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:25:31 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:26:02 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:26:32 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:27:20 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:29:00 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:29:19 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:30:18 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:30:36 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:30:57 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:31:18 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:31:48 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:32:05 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:33:21 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:35:26 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:36:16 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:38:04 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:38:28 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:38:46 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:45:34 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:46:15 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:46:39 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:47:09 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:49:08 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:50:35 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:53:52 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:54:22 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:56:20 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 21:56:47 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:06:02 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:06:28 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:08:21 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:09:41 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:10:56 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:11:44 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:12:23 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:14:38 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:15:24 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:15:32 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:16:09 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:16:27 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:18:47 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:22:05 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:22:34 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:22:46 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:23:25 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:24:05 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:24:16 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:24:25 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:25:17 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:27:46 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:28:24 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:28:58 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:29:08 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:29:17 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:29:48 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:29:59 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:30:12 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:31:08 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:31:52 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('apple-touch-ico...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:31:53 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('apple-touch-ico...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:36:35 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:37:19 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:37:49 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:38:12 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:38:55 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:40:41 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:41:13 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:42:13 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:42:50 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:45:47 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:46:09 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:56:52 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 22:57:54 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:00:54 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:01:29 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:02:07 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:06:09 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:06:51 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:07:22 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:08:16 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:09:13 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:09:59 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:10:13 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:10:32 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:12:09 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:12:31 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:12:34 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:12:39 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:13:43 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:14:15 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:17:51 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:18:17 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:20:59 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:22:38 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:23:06 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:40:23 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:42:23 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130
+[29-Jan-2019 23:44:14 UTC] Uncaught exception: 'Exception' with message 'No route matched.'
+Stack trace: #0 /Applications/MAMP/htdocs/public/index.php(59): Core\Router->dispatch('assets/vendor/j...')
+#1 {main}
+Thrown in '/Applications/MAMP/htdocs/includes/Core/Router.php' on line 130

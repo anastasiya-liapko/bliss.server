@@ -1,0 +1,15 @@
+{
+  "require": {
+    "rakit/validation": "*",
+    "twig/twig": "~2.0",
+    "phpmailer/phpmailer": "~6.0",
+    "ext-json": "*",
+    "ext-PDO": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Core\\": "includes/Core/",
+      "App\\": "includes/App/"
+    }
+  }
+}

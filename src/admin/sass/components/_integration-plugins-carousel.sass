@@ -1,0 +1,37 @@
+.integration-plugins-carousel
+  position: relative
+  width: 100%
+  max-width: 900px
+  margin: 0 auto 37px auto
+
+.integration-plugins-carousel__item
+  text-align: center
+
+.integration-plugins-carousel__btn
+  position: absolute
+  top: 50%
+  width: 27px
+  height: 44px
+  margin-top: -22px
+  z-index: 10
+  font-size: 26px
+  color: $primary-color
+  cursor: pointer
+
+  &:hover
+    outline: none
+
+.integration-plugins-carousel__btn_prev
+  left: 0
+  right: auto
+
+.integration-plugins-carousel__btn_next
+  right: 0
+  left: auto
+
+@media all and (min-width: 768px)
+  .integration-plugins-carousel__btn_prev
+    left: -40px
+
+  .integration-plugins-carousel__btn_next
+    right: -40px

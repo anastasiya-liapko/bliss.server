@@ -1,0 +1,130 @@
+{% extends "ShopAdmin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_name }}{% endblock %}
+
+{% block body %}
+
+  <div class="page-container">
+    {% set active_list_item = 'history' %}
+    {{ include('ShopAdmin/templates/side-menu.html') }}
+
+    <main class="page-main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="page-title">{{ title }}</h1>
+          </div>
+        </div>
+
+        <div class="request-statistic">
+          <div class="row">
+            <div class="col-12 col-md-3 mb-3 mb-md-0">
+              <div class="request-statistic__item">Всего заявок: <span
+                  class="request-statistic__number">{{ statistic[0].amount|default(0) }}</span></div>
+              <div class="request-statistic__item">На сумму: <span
+                  class="request-statistic__number">{{ statistic[0].sum|number_format(2, '.', ' ')|default(0) }} р</span></div>
+            </div>
+            <div class="col-12 col-md-3 mb-3 mb-md-0">
+              <div class="request-statistic__item">Отклонённых: <span
+                  class="request-statistic__number">{{ statistic[1].amount|default(0) }}</span></div>
+              <div class="request-statistic__item">На сумму: <span
+                  class="request-statistic__number">{{ statistic[1].sum|number_format(2, '.', ' ')|default(0) }} р</span></div>
+            </div>
+            <div class="col-12 col-md-3 mb-3 mb-md-0">
+              <div class="request-statistic__item">Одобренных: <span
+                  class="request-statistic__number">{{ statistic[2].amount|default(0) }}</span></div>
+              <div class="request-statistic__item">На сумму: <span
+                  class="request-statistic__number">{{ statistic[2].sum|number_format(2, '.', ' ')|default(0) }} р</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-md-12">
+
+            <div class="table-wrap">
+              <table class="table bg-white">
+                <thead>
+                <tr>
+                  <th></th>
+                  <th>Номер заявки</th>
+                  <th>Дата подачи</th>
+                  <th>Сумма</th>
+                  <th>Номер заказа</th>
+                  <th>Статус</th>
+                  <th>Кредит отложенный</th>
+                  <th>Деньги получены</th>
+                  <th>Товар получен</th>
+                  <th>Код отслеживания посылки</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for request in requests %}
+                  <tr>
+                    <td>
+                      <a href="{{ site_url }}/shop-admin/history/{{ request.id }}/edit" title="Редактировать">
+                        <i class="fas fa-edit" aria-hidden="true"></i>
+                      </a>
+                    </td>
+                    <td>{{ request.id|default('-') }}</td>
+                    <td>{{ request.time_start|date('d.m.Y h:m:s') }}</td>
+                    <td>{{ request.order_price|number_format(2, '.', ' ')|default('-') }}</td>
+                    <td>{{ request.order_id|default('-') }}</td>
+                    <td class="request-statistic__status_{{ request.status|default('-') }}">
+                      {% if request.status == 'pending' %}
+                        В рассмотрении
+                      {% elseif request.status == 'approved' %}
+                        Одобрена
+                      {% elseif request.status == 'declined' %}
+                        Отклонена
+                      {% elseif request.status == 'cancel' %}
+                        Отменена клиентом
+                      {% elseif request.status == 'manual' %}
+                        Требует решения
+                      {% else %}
+                        -
+                      {% endif %}
+                    </td>
+                    <td>
+                      {% if request.is_loan_deferred == 1 %}
+                        да
+                      {% else %}
+                        нет
+                      {% endif %}
+                    </td>
+                    <td>
+                      {% if request.is_loan_received == 1 %}
+                        да
+                      {% else %}
+                        нет
+                      {% endif %}
+                    </td>
+                    <td>
+                      {% if request.is_order_received == 1 %}
+                        да
+                      {% else %}
+                        нет
+                      {% endif %}
+                    </td>
+                    <td>{{ request.tracking_id|default('-') }}</td>
+                  </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            {{ pagination|raw }}
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+  <!-- page-content -->
+
+{% endblock %}
