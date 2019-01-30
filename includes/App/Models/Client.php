@@ -62,6 +62,13 @@ class Client extends \Core\Model {
   private $birth_place = '';
 
   /**
+   * TIN
+   *
+   * @var mixed
+   */
+  private $tin = null;
+
+  /**
    * Passport number
    *
    * @var string
@@ -74,6 +81,7 @@ class Client extends \Core\Model {
    * @var string
    */
   private $passport_division_code = '';
+
   /**
    * Passport issued by
    *
@@ -87,6 +95,20 @@ class Client extends \Core\Model {
    * @var string
    */
   private $passport_issued_date = '';
+
+  /**
+   * Workplace
+   *
+   * @var string
+   */
+  private $workplace = '';
+
+  /**
+   * Salary
+   *
+   * @var mixed
+   */
+  private $salary = null;
 
   /**
    * Registration zip code
@@ -256,7 +278,7 @@ class Client extends \Core\Model {
       'fact_street'            => 'required_if:is_address_matched,0',
       'fact_building'          => 'required_if:is_address_matched,0',
       'fact_apartment'         => 'required_if:is_address_matched,0',
-      'phone'                  => 'required|regex:/^\+7\d{10}$/',
+      'phone'                  => 'required|regex:/^7\d{10}$/',
       'email'                  => 'required|email',
     ] );
 
@@ -369,11 +391,11 @@ class Client extends \Core\Model {
       $insert = false;
 
       if ( $this->isClientExists() ) {
-        $sql = 'UPDATE clients SET last_name = :last_name, first_name = :first_name, middle_name = :middle_name, birth_date = :birth_date, birth_place = :birth_place, passport_number = :passport_number, passport_division_code = :passport_division_code, passport_issued_by = :passport_issued_by, passport_issued_date = :passport_issued_date, reg_zip_code = :reg_zip_code, reg_city = :reg_city, reg_street = :reg_street, reg_building = :reg_building, reg_apartment = :reg_apartment, is_address_matched = :is_address_matched, fact_zip_code = :fact_zip_code, fact_city = :fact_city, fact_street = :fact_street, fact_building = :fact_building, fact_apartment = :fact_apartment, email = :email WHERE phone = :phone';
+        $sql = 'UPDATE clients SET last_name = :last_name, first_name = :first_name, middle_name = :middle_name, birth_date = :birth_date, birth_place = :birth_place, tin = :tin, salary = :salary, passport_number = :passport_number, passport_division_code = :passport_division_code, passport_issued_by = :passport_issued_by, passport_issued_date = :passport_issued_date, workplace = :workplace, reg_zip_code = :reg_zip_code, reg_city = :reg_city, reg_street = :reg_street, reg_building = :reg_building, reg_apartment = :reg_apartment, is_address_matched = :is_address_matched, fact_zip_code = :fact_zip_code, fact_city = :fact_city, fact_street = :fact_street, fact_building = :fact_building, fact_apartment = :fact_apartment, email = :email WHERE phone = :phone';
       } else {
         $insert = true;
 
-        $sql = 'INSERT INTO clients (last_name, first_name, middle_name, birth_date, birth_place, passport_number, passport_division_code, passport_issued_by, passport_issued_date, reg_zip_code, reg_city, reg_street, reg_building, reg_apartment, is_address_matched, fact_zip_code, fact_city, fact_street, fact_building, fact_apartment, email, phone) VALUES (:last_name, :first_name, :middle_name, :birth_date, :birth_place, :passport_number, :passport_division_code, :passport_issued_by, :passport_issued_date, :reg_zip_code, :reg_city, :reg_street, :reg_building, :reg_apartment, :is_address_matched, :fact_zip_code, :fact_city, :fact_street, :fact_building, :fact_apartment, :email, :phone)';
+        $sql = 'INSERT INTO clients (last_name, first_name, middle_name, birth_date, birth_place, tin, passport_number, passport_division_code, passport_issued_by, passport_issued_date, workplace, salary, reg_zip_code, reg_city, reg_street, reg_building, reg_apartment, is_address_matched, fact_zip_code, fact_city, fact_street, fact_building, fact_apartment, email, phone) VALUES (:last_name, :first_name, :middle_name, :birth_date, :birth_place, :tin, :passport_number, :passport_division_code, :passport_issued_by, :passport_issued_date, :workplace, :salary, :reg_zip_code, :reg_city, :reg_street, :reg_building, :reg_apartment, :is_address_matched, :fact_zip_code, :fact_city, :fact_street, :fact_building, :fact_apartment, :email, :phone)';
       }
 
       $this->birth_date           = date( 'Y-m-d H:i:s', strtotime( $this->birth_date ) );
@@ -387,14 +409,18 @@ class Client extends \Core\Model {
       $stmt->bindValue( ':middle_name', $this->middle_name, PDO::PARAM_STR );
       $stmt->bindValue( ':birth_date', $this->birth_date, PDO::PARAM_STR );
       $stmt->bindValue( ':birth_place', $this->birth_place, PDO::PARAM_STR );
-      $stmt->bindValue( ':passport_number', $this->passport_number, PDO::PARAM_STR );
-      $stmt->bindValue( ':passport_division_code', $this->passport_division_code, PDO::PARAM_STR );
+      $stmt->bindValue( ':tin', $this->tin, PDO::PARAM_INT );
+      $stmt->bindValue( ':passport_number', preg_replace( '/\s/', '', $this->passport_number ), PDO::PARAM_STR );
+      $stmt->bindValue( ':passport_division_code', preg_replace( '/-/', '', $this->passport_division_code ),
+        PDO::PARAM_STR );
       $stmt->bindValue( ':passport_issued_by', $this->passport_issued_by, PDO::PARAM_STR );
       $stmt->bindValue( ':passport_issued_date', $this->passport_issued_date, PDO::PARAM_STR );
       $stmt->bindValue( ':reg_zip_code', $this->reg_zip_code, PDO::PARAM_STR );
       $stmt->bindValue( ':reg_city', $this->reg_city, PDO::PARAM_STR );
       $stmt->bindValue( ':reg_street', $this->reg_street, PDO::PARAM_STR );
       $stmt->bindValue( ':reg_building', $this->reg_building, PDO::PARAM_STR );
+      $stmt->bindValue( ':workplace', $this->workplace, PDO::PARAM_STR );
+      $stmt->bindValue( ':salary', $this->salary, PDO::PARAM_INT );
       $stmt->bindValue( ':reg_apartment', $this->reg_apartment, PDO::PARAM_STR );
       $stmt->bindValue( ':is_address_matched', $this->is_address_matched, PDO::PARAM_INT );
       $stmt->bindValue( ':fact_zip_code', $this->fact_zip_code, PDO::PARAM_STR );
@@ -418,6 +444,27 @@ class Client extends \Core\Model {
     }
 
     return false;
+  }
+
+  /**
+   * Finds an client model by id
+   *
+   * @param int $id
+   *
+   * @return mixed The client object if found, false otherwise.
+   */
+  public static function findByID( int $id ) {
+    $sql = 'SELECT * FROM clients WHERE id = :id LIMIT 1';
+
+    $db   = static::getDB();
+    $stmt = $db->prepare( $sql );
+
+    $stmt->bindValue( ':id', $id, PDO::PARAM_INT );
+
+    $stmt->setFetchMode( PDO::FETCH_CLASS, get_called_class() );
+    $stmt->execute();
+
+    return $stmt->fetch();
   }
 
   /**
@@ -505,6 +552,15 @@ class Client extends \Core\Model {
   }
 
   /**
+   * Gets tin
+   *
+   * @return mixed
+   */
+  public function getTin() {
+    return $this->tin;
+  }
+
+  /**
    * Gets passport number
    *
    * @return string
@@ -538,6 +594,24 @@ class Client extends \Core\Model {
    */
   public function getPassportIssuedDate(): string {
     return $this->passport_issued_date;
+  }
+
+  /**
+   * Gets workplace
+   *
+   * @return string
+   */
+  public function getWorkplace(): string {
+    return $this->workplace;
+  }
+
+  /**
+   * Gets salary
+   *
+   * @return mixed
+   */
+  public function getSalary() {
+    return $this->salary;
   }
 
   /**

@@ -95,6 +95,11 @@ Form.send = function (action, data, submitButton) {
         Toast.create(data.error, data.message[0]);
       }
 
+      // Another ajax
+      if (data.ajax) {
+        Form.send(data.ajax.action);
+      }
+
       // Redirects
       if (data.redirect) {
         window.location.href = data.redirect;

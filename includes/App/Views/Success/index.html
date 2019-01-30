@@ -64,17 +64,17 @@
 
         <span class="done__text message__text message__text_width text-center mb-3">Остался последний шаг: ввести код из смс и ваш заказ будет оплачен.</span>
 
-        <form id="js-formCodeSms" class="d-flex flex-column align-items-center w-100 w-sm-auto"
+        <form id="js-formSuccess" class="d-flex flex-column align-items-center w-100 w-sm-auto"
               action="{{ form_action }}"
               method="post" enctype="multipart/form-data">
 
-          <label for="js-formCodeSmsInputCode" class="message__title text-center mb-0">Введите код из смс</label>
+          <label for="js-formSuccessInputCode" class="message__title text-center mb-0">Введите код из смс</label>
           <!-- <input id="js-formCodeSmsInputCode" class="message__input input mt-3" name="sms_code" type="text"
                  pattern="[0-9]*" placeholder="****" required> -->
 
           <div class="asterisks text-center position-relative mt-3">
-            <span id="js-formCodeSmsInputAsterisks" class="asterisks__placeholder d-block position-absolute"></span>
-            <input id="js-formCodeSmsInputCode" class="asterisks__input message__input input mt-0" name="sms_code" type="text"
+            <span id="js-formSuccessInputAsterisks" class="asterisks__placeholder d-block position-absolute"></span>
+            <input id="js-formSuccessInputCode" class="asterisks__input message__input input mt-0" name="sms_code" type="text"
                  pattern="[0-9]*" placeholder="****" required>
           </div><!-- asterisks -->
 
@@ -93,7 +93,7 @@
 
           </div>
 
-          <button id="js-formCodeSmsBtnSubmit" class="btn btn_primary btn_big message__btn mt-4 mb-4" type="submit" disabled>
+          <button id="js-formSuccessBtnSubmit" class="btn btn_primary btn_big message__btn mt-4 mb-4" type="submit" disabled>
             Завершить оплату
           </button>
 

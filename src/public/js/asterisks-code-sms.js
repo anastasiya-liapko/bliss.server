@@ -1,8 +1,8 @@
 'use strict';
 
 $(function () {
-  var smsCodeInput = $('#js-formCodeSmsInputCode'),
-    smsCodeAsterisks = $('#js-formCodeSmsInputAsterisks');
+  var smsCodeInput = $('#js-formSuccessInputCode'),
+    smsCodeAsterisks = $('#js-formSuccessInputAsterisks');
 
   smsCodeInput.on('keyup change', function () {
     smsCodeAsterisks.text(smsCodeInput.val());

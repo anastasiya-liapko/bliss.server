@@ -6,8 +6,7 @@ $(function () {
     smsCodeInput = $('#js-formCodeSmsInputCode'),
     submitButton = $('#js-formCodeSmsBtnSubmit');
 
-  // smsCodeInput.inputmask('9999');
-  smsCodeInput.inputmask('9999',{'placeholder': ''}); // deleted placeholder
+  smsCodeInput.inputmask('9999');
 
   form.validate({
     highlight: function (element) {
@@ -29,7 +28,6 @@ $(function () {
       sms_code: {
         required: true,
         number: true,
-        minlength: 4, // added minlength
         normalizer: function (value) {
           return $.trim(value);
         }
@@ -42,8 +40,7 @@ $(function () {
     messages: {
       sms_code: {
         required: 'Это обязательное поле',
-        number: 'Код должен содержать только цифры',
-        minlength: 'Код должен содержать 4 символа' // added error text
+        number: 'Код должен содержать только цифры'
       },
       terms: {
         required: 'Ознакомьтесь с условиями',
@@ -54,7 +51,7 @@ $(function () {
     errorElement: 'span'
   });
 
-  form.on('keyup keydown blur change', 'input, select, textarea', function () { // added keydown
+  form.on('keyup blur change', 'input, select, textarea', function () {
     Form.changeButtonStatus(form, submitButton);
   });
 

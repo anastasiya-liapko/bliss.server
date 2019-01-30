@@ -3,6 +3,7 @@
 $(function () {
   var form = $('#js-formProfileClient'),
     birthDateInput = $('#js-formProfileClientInputBirthDate'),
+    tinInput = $('#js-formProfileClientInputTin'),
     passportNumberInput = $('#js-formProfileClientInputPassportNumber'),
     passportDivisionCodeInput = $('#js-formProfileClientInputPassportDivisionCode'),
     passportIssuedDateInput = $('#js-formProfileClientInputPassportIssuedDate'),
@@ -19,6 +20,7 @@ $(function () {
     submitButton = $('#js-formProfileClientBtnSubmit');
 
   birthDateInput.inputmask('99.99.9999');
+  tinInput.inputmask('999999999999');
   passportNumberInput.inputmask('99 99 999999');
   passportDivisionCodeInput.inputmask('999-999');
   passportIssuedDateInput.inputmask('99.99.9999');
@@ -75,6 +77,13 @@ $(function () {
           return $.trim(value);
         }
       },
+      tin: {
+        required: true,
+        number: true,
+        normalizer: function (value) {
+          return $.trim(value);
+        }
+      },
       passport_number: {
         required: true,
         passport: true,
@@ -98,6 +107,20 @@ $(function () {
       },
       passport_issued_date: {
         required: true,
+        normalizer: function (value) {
+          return $.trim(value);
+        }
+      },
+      workplace: {
+        required: true,
+        plain_text: true,
+        normalizer: function (value) {
+          return $.trim(value);
+        }
+      },
+      salary: {
+        required: true,
+        number: true,
         normalizer: function (value) {
           return $.trim(value);
         }
@@ -200,6 +223,10 @@ $(function () {
         required: 'Это обязательное поле',
         plain_text: 'Поле не должно содержать HTML-теги'
       },
+      tin: {
+        required: 'Это обязательное поле',
+        number: 'Номер ИНН должен содержать только цифры'
+      },
       passport_number: {
         required: 'Это обязательное поле',
         passport: 'Введите данные в формате 01 02 343543'
@@ -214,6 +241,14 @@ $(function () {
       },
       passport_issued_date: {
         required: 'Это обязательное поле'
+      },
+      workplace: {
+        required: 'Это обязательное поле',
+        plain_text: 'Поле не должно содержать HTML-теги'
+      },
+      salary: {
+        required: 'Это обязательное поле',
+        number: 'Поле должено содержать только цифры'
       },
       reg_zip_code: {
         required: 'Это обязательное поле',

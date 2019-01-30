@@ -63,6 +63,10 @@
         </div>
 
         <div class="anketa__column">
+          <label for="js-formProfileClientInputTin" class="label d-block">ИНН</label>
+          <input id="js-formProfileClientInputTin" class="input input_black w-100" type="text"
+                 name="tin" pattern="[0-9]*" placeholder="433443534378" value="{{ client.tin }}" required>
+
           <label for="js-formProfileClientInputPassportNumber" class="label d-block">Серия и номер паспорта</label>
           <input id="js-formProfileClientInputPassportNumber" class="input input_black w-100" type="text"
                  name="passport_number"
@@ -86,6 +90,23 @@
                  autocomplete="off" required>
         </div>
 
+      </div>
+
+      <span class="legend d-block w-100 text-left text-sm-center text-lg-left mb-3 mt-5">Сведения о работе</span>
+
+      <div
+        class="anketa__fieldset d-flex flex-column align-items-center flex-lg-row justify-content-lg-between justify-content-xl-start align-items-lg-start w-100">
+        <div class="anketa__column anketa__column_left">
+          <label for="js-formProfileClientInputWorkplace" class="label d-block">Место работы</label>
+          <input id="js-formProfileClientInputWorkplace" class="input input_black" type="text"
+                 name="workplace" placeholder="ООО Ромашка" value="{{ client.workplace }}" required>
+        </div>
+
+        <div class="anketa__column">
+          <label for="js-formProfileClientInputSalary" class="label d-block">Ежемесячный доход</label>
+          <input id="js-formProfileClientInputSalary" class="input input_black" type="text" pattern="[0-9]*"
+                 name="salary" placeholder="15000" value="{{ client.salary }}" required>
+        </div>
       </div>
 
       <span class="legend d-block w-100 text-left text-sm-center text-lg-left mb-3 mt-5">Адрес регистрации</span>

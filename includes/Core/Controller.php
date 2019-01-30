@@ -110,10 +110,12 @@ abstract class Controller {
    * Forbids not ajax request
    *
    * @return void
+   *
+   * @throws \Exception
    */
   public function forbidNotAjax() {
     if ( ! $this->isAjaxRequest() ) {
-      die( 'Admission is by invitation only.' );
+      throw new \Exception( 'No route matched.', 404 );
     }
   }
 

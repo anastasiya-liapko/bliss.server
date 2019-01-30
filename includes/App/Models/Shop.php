@@ -68,9 +68,9 @@ class Shop extends \Core\Model {
   /**
    * Tin
    *
-   * @var string
+   * @var mixed
    */
-  private $tin = '';
+  private $tin = null;
 
   /**
    * Description
@@ -257,7 +257,7 @@ class Shop extends \Core\Model {
       $stmt->bindValue( ':last_name', $this->last_name, PDO::PARAM_STR );
       $stmt->bindValue( ':first_name', $this->first_name, PDO::PARAM_STR );
       $stmt->bindValue( ':middle_name', $this->middle_name, PDO::PARAM_STR );
-      $stmt->bindValue( ':tin', $this->tin, PDO::PARAM_STR );
+      $stmt->bindValue( ':tin', $this->tin, PDO::PARAM_INT );
       $stmt->bindValue( ':dsc', $this->dsc, PDO::PARAM_STR );
       $stmt->bindValue( ':active', $this->active, PDO::PARAM_INT );
       $stmt->bindValue( ':secret_key', $this->secret_key, PDO::PARAM_STR );
@@ -307,7 +307,7 @@ class Shop extends \Core\Model {
       $stmt->bindValue( ':last_name', $this->last_name, PDO::PARAM_STR );
       $stmt->bindValue( ':first_name', $this->first_name, PDO::PARAM_STR );
       $stmt->bindValue( ':middle_name', $this->middle_name, PDO::PARAM_STR );
-      $stmt->bindValue( ':tin', $this->tin, PDO::PARAM_STR );
+      $stmt->bindValue( ':tin', $this->tin, PDO::PARAM_INT );
       $stmt->bindValue( ':dsc', $this->dsc, PDO::PARAM_STR );
       $stmt->bindValue( ':active', 0, PDO::PARAM_INT );
       $stmt->bindValue( ':id', $this->id, PDO::PARAM_INT );
@@ -430,9 +430,9 @@ class Shop extends \Core\Model {
   /**
    * Gets tin
    *
-   * @return string
+   * @return mixed
    */
-  public function getTin(): string {
+  public function getTin() {
     return $this->tin;
   }
 

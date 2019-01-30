@@ -67,11 +67,11 @@ gulp.task('js_admin', function () {
 
 gulp.task('images', function () {
   return gulp.src(['src/public/img/*.{png,jpg,svg}', 'src/admin/img/*.{png,jpg,svg}'])
-    // .pipe(imagemin([
-    //   imagemin.optipng({optimizationLevel: 3}),
-    //   imagemin.jpegtran({progressive: true}),
-    //   imagemin.svgo()
-    // ]))
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.svgo()
+    ]))
     .pipe(gulp.dest('public/assets/img'));
 });
 

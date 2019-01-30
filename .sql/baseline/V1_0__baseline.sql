@@ -22,7 +22,7 @@ CREATE TABLE `shops` (
   `last_name` VARCHAR(255) NOT NULL COMMENT 'фамилия',
   `first_name` VARCHAR(255) NOT NULL COMMENT 'имя',
   `middle_name` VARCHAR(255) NOT NULL COMMENT 'отчество',
-  `tin` VARCHAR(12) UNIQUE NOT NULL COMMENT 'инн',
+  `tin` BIGINT(12) UNSIGNED UNIQUE NOT NULL COMMENT 'ИНН',
   `dsc` TEXT(1000) COMMENT 'описание',
   `active` TINYINT(1) UNSIGNED DEFAULT 0 COMMENT 'активный ли магазин',
   `secret_key` VARCHAR(255) NOT NULL COMMENT 'секретный ключ'
@@ -48,10 +48,13 @@ CREATE TABLE `clients` (
   `middle_name` VARCHAR(255) NOT NULL COMMENT 'фамилия',
   `birth_date` DATETIME NOT NULL COMMENT 'дата рождения',
   `birth_place` VARCHAR(255) NOT NULL COMMENT 'место рождения',
+  `tin` BIGINT(12) UNSIGNED  NOT NULL COMMENT 'ИНН',
   `passport_number` VARCHAR(255) NOT NULL COMMENT 'серия и номер паспорта',
   `passport_division_code` VARCHAR(255) NOT NULL COMMENT 'код подразделения, выдавшего паспорт',
   `passport_issued_by` VARCHAR(255) NOT NULL COMMENT 'кем выдан паспорт',
   `passport_issued_date` DATETIME NOT NULL COMMENT 'дата выдачи паспорта',
+  `workplace` VARCHAR(255) NOT NULL COMMENT 'Место работы',
+  `salary` BIGINT UNSIGNED NOT NULL COMMENT 'Ежемесячный доход',
   `reg_zip_code` VARCHAR(255) NOT NULL COMMENT 'индекс по прописке',
   `reg_city` VARCHAR(255) NOT NULL COMMENT 'город по прописке',
   `reg_street` VARCHAR(255) NOT NULL COMMENT 'улица по прописке',
@@ -73,8 +76,10 @@ CREATE TABLE `mfo` (
   `name` VARCHAR(255) NOT NULL COMMENT 'название мфо',
   `phone` VARCHAR(12) COMMENT 'телефон',
   `email` VARCHAR(255) COMMENT 'email для связи и уточнения об отказе в выдаче кредита',
+  `min_loan_sum` FLOAT (11, 2) NOT NULL COMMENT 'минимальная сумма кредита',
+  `max_loan_sum` FLOAT (11, 2) NOT NULL COMMENT 'максимальная сумма кредита',
+  `can_loan_deferred` TINYINT(1) UNSIGNED DEFAULT 0 COMMENT 'работает ли с отложенными кредитами?',
   `class_connector` VARCHAR(255) COMMENT 'класс-конектор',
-  `api_url` VARCHAR(255) COMMENT 'ссылка на файл api для интеграции',
   `api_id` VARCHAR(255) COMMENT 'идентфикатор системы в МФО',
   `api_password` VARCHAR(255) COMMENT 'пароль системы в МФО'
 )ENGINE=INNODB DEFAULT CHARSET=utf8 COMMENT 'мфо';
@@ -136,6 +141,7 @@ CREATE TABLE `clients_initial_data` (
   `callback_url` VARCHAR(255) NOT NULL COMMENT 'ссылка для возврата',
   `is_loan_deferred` TINYINT(1) UNSIGNED DEFAULT 0 COMMENT 'кредит отложенный? (1 - да, 0 - нет)',
   `goods` VARCHAR(255) NOT NULL COMMENT 'товары',
+  `request_id` INT(11) UNSIGNED DEFAULT NULL COMMENT 'id заявки',
   `token_expires_at` DATETIME NOT NULL COMMENT 'срок годности токена',
   `sms_code` VARCHAR(255) NOT NULL COMMENT 'sms-код',
   `sms_code_expires_at` DATETIME NOT NULL COMMENT 'срок годности sms-кода'
@@ -164,7 +170,7 @@ ALTER TABLE `mfo_shop_cooperation`
 INSERT INTO admins (id, name, email, password_hash, role) VALUES (1, 'Супер администратор', 'admin@bliss.ru', 'de65262646860a5aba74c271718c2f32', 'super_admin');
 
 /* Inserts mfo */
-INSERT INTO mfo (id, name, phone, email, api_url, api_id, api_password) VALUES (1, 'WEBBANKIR', '', '', 'https://demo.webbankir.partners/api-rmk/v1', '1', 'qwerty');
+INSERT INTO mfo (id, name, phone, email, class_connector, api_id, api_password) VALUES (1, 'WEBBANKIR', '', '', 'Webbankir', '1', 'qwerty');
 
 /* Inserts test shop */
 INSERT INTO shops (id, type, company_name, last_name, first_name, middle_name, tin, dsc, active, secret_key) VALUES (1, 'entrepreneur', 'ИП "Петров П.П."', 'Петров', 'Пётр', 'Петрович', '777777777777', '', 1, 'FMNDesQ58G8y4O8bgGPvsEGFPwEe8Gdj');

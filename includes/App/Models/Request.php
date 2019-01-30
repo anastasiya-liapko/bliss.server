@@ -388,6 +388,27 @@ class Request extends \Core\Model {
   }
 
   /**
+   * Gets info of the request include a client info
+   *
+   * @param int $id
+   *
+   * @return mixed
+   */
+  public static function getFullRequestInfo( int $id ) {
+    $sql = 'SELECT a.id, a.client_id, a.shop_id, a.order_id, a.order_price, a.goods, a.status, a.is_loan_deferred, b.last_name, b.first_name, b.middle_name, b.birth_date, b.birth_place, b.tin, b.passport_number, b.passport_division_code, b.passport_issued_by, b.passport_issued_date, b.workplace, b.salary, b.reg_zip_code, b.reg_city, b.reg_street, b.reg_building, b.reg_apartment, b.is_address_matched, b.fact_zip_code, b.fact_city, b.fact_street, b.fact_building, b.fact_apartment, b.email, b.phone FROM requests AS a INNER JOIN clients AS b WHERE a.id = :id AND a.client_id = b.id LIMIT 1';
+
+    $db   = static::getDB();
+    $stmt = $db->prepare( $sql );
+
+    $stmt->bindValue( ':id', $id, PDO::PARAM_INT );
+
+    $stmt->setFetchMode( PDO::FETCH_ASSOC );
+    $stmt->execute();
+
+    return $stmt->fetch();
+  }
+
+  /**
    * Gets total count of requests by the shop id
    *
    * @param int $shop_id

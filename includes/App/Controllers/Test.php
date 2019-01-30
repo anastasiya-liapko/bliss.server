@@ -22,13 +22,14 @@ class Test extends \Core\Controller {
   public function indexAction() {
     $shop_id          = 1;
     $order_id         = 8;
-    $order_price      = 590.99;
+    $order_price      = 3000;
     $callback_url     = 'https://yandex.ru';
     $is_loan_deferred = 0;
     $goods            = [
       [
-        'name'  => 'Наушники внутриканальные Sony MDR-EX15LP Black',
-        'price' => 590.99
+        'name'          => 'Наушники внутриканальные Sony MDR-EX15LP Black',
+        'price'         => 3000,
+        'is_returnable' => true
       ]
     ];
     $goods_serialized = serialize( $goods );

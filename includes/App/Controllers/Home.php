@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Models\Partner;
-use App\Models\ShopAdmin;
 use App\SiteInfo;
 use Core\View;
 
@@ -22,7 +21,7 @@ class Home extends \Core\Controller {
    */
   public function indexAction() {
     View::renderTemplate( 'Home/index.html', [
-      'site_url' => SiteInfo::getSiteURL(),
+      'site_url'     => SiteInfo::getSiteURL(),
       'title'        => SiteInfo::NAME,
       'body_class'   => 'body_home',
       'phone_number' => SiteInfo::PHONE,

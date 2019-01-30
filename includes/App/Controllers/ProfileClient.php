@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Client;
 use App\Models\ClientInitialData;
+use App\Models\MFO;
 use App\Models\Request;
 use App\Models\ShopAdmin;
 use App\SiteInfo;
@@ -108,10 +109,13 @@ class ProfileClient extends \Core\Controller {
         'middle_name'            => $client->getMiddleName(),
         'birth_date'             => date( 'Y-m-d', strtotime( $client->getBirthDate() ) ),
         'birth_place'            => $client->getBirthPlace(),
+        'tin'                    => $client->getTin(),
         'passport_number'        => $client->getPassportNumber(),
         'passport_division_code' => $client->getPassportDivisionCode(),
         'passport_issued_by'     => $client->getPassportIssuedBy(),
         'passport_issued_date'   => date( 'Y-m-d', strtotime( $client->getPassportIssuedDate() ) ),
+        'workplace'              => $client->getWorkplace(),
+        'salary'                 => $client->getSalary(),
         'reg_zip_code'           => $client->getRegZipCode(),
         'reg_city'               => $client->getRegCity(),
         'reg_street'             => $client->getRegStreet(),
@@ -147,9 +151,10 @@ class ProfileClient extends \Core\Controller {
 
     $client_initial_data = ClientInitialData::findByToken( $_COOKIE['remembered_client'] );
 
-    $_POST['phone'] = $client_initial_data->getPhone();
+    $data          = $_POST;
+    $data['phone'] = $client_initial_data->getPhone();
 
-    $client = new Client( $_POST );
+    $client = new Client( $data );
 
     if ( ! $client->save() ) {
       $this->sendJsonResponse( [ 'error' => true, 'message' => $client->getErrors() ] );
@@ -165,7 +170,7 @@ class ProfileClient extends \Core\Controller {
     $order_id = $client_initial_data->getOrderId();
 
     if ( Request::findForClient( $client_id, $shop_id, $order_id ) ) {
-      $this->sendJsonResponse( [ 'error' => true, 'message' => [ 'Заявка уже создана' ] ] );
+      $this->sendJsonResponse( [ 'error' => true, 'message' => [ 'Заявка уже создана.' ] ] );
     }
 
     $request = new Request( [
@@ -181,6 +186,10 @@ class ProfileClient extends \Core\Controller {
       $this->sendJsonResponse( [ 'error' => true, 'message' => $request->getErrors() ] );
     }
 
+    if ( ! $client_initial_data->saveRequestId( $request->getId() ) ) {
+      $this->sendJsonResponse( [ 'error' => true, 'message' => $client_initial_data->getErrors() ] );
+    }
+
     $this->sendJsonResponse( [
       'error'     => false,
       'openModal' => [ 'id' => '#js-modalSendRequest' ],
@@ -194,9 +203,52 @@ class ProfileClient extends \Core\Controller {
         'progressBar' => [
           'id'       => '#js-profileClientProgressBar',
           'endAfter' => 180,
-        ]
+        ],
       ],
+      'ajax'      => [
+        'action' => SiteInfo::getSiteURL() . '/profile-client/send-application'
+      ]
     ] );
+  }
+
+  /**
+   * Sends an application
+   *
+   * @return void
+   * @throws \Exception
+   */
+  public function sendApplication() {
+    $this->forbidNotAjax();
+
+    $client_initial_data = ClientInitialData::findByToken( $_COOKIE['remembered_client'] );
+
+    $shop_id       = $client_initial_data->getShopId();
+    $order_price   = $client_initial_data->getOrderPrice();
+    $loan_deferred = $client_initial_data->getIsLoanDeferred();
+
+    if ( $mfo_list = MFO::getForShop( $shop_id, $order_price, $loan_deferred ) ) {
+      $request_info = Request::getFullRequestInfo( $client_initial_data->getRequestId() );
+
+      foreach ( $mfo_list as $mfo ) {
+        $class_name = 'App\\connectors\\' . $mfo['class_connector'];
+
+        if ( ! class_exists( $class_name ) ) {
+          continue;
+        }
+
+        $loan = new $class_name( $mfo['api_id'], $mfo['api_password'], $request_info );
+
+        if ( method_exists( $loan, 'start' ) && $result = $loan->start() ) {
+          $result = json_decode( $result, true );
+
+          if ( $result['status'] === 'wait_confirm_loan' ) {
+            $this->redirect( SiteInfo::getSiteURL() . '/success' );
+          }
+        }
+      }
+    }
+
+    $this->redirect( SiteInfo::getSiteURL() . '/cancel' );
   }
 
   /**

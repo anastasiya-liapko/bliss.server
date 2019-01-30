@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
+use App\PlainRule;
 use App\Security;
 use App\Token;
 use PDO;
-use App\PlainRule;
 use Rakit\Validation\Validator;
 
 /**
@@ -89,6 +89,13 @@ class ClientInitialData extends \Core\Model {
    * @var string
    */
   private $control = '';
+
+  /**
+   * Request id
+   *
+   * @var string
+   */
+  private $request_id = '';
 
   /**
    * Token
@@ -283,7 +290,7 @@ class ClientInitialData extends \Core\Model {
     $this->validatePhone( $phone );
 
     if ( empty( $this->errors ) ) {
-      $this->phone = preg_replace( '/[-)(\s]/', '', $phone );
+      $this->phone = preg_replace( '/[-)+(\s]/', '', $phone );
 
       $sql = 'UPDATE clients_initial_data SET phone = :phone WHERE token_hash = :token_hash';
 
@@ -321,6 +328,35 @@ class ClientInitialData extends \Core\Model {
     $stmt = $db->prepare( $sql );
 
     $stmt->bindValue( ':client_id', $this->client_id, PDO::PARAM_INT );
+    $stmt->bindValue( ':token_hash', $this->token_hash, PDO::PARAM_STR );
+
+    if ( $stmt->execute() ) {
+      return true;
+    } else {
+      $this->errors[] = 'Не удалось сохранить id клиента, попробуйте ещё раз.';
+    }
+
+    return false;
+  }
+
+  /**
+   * Saves the request id
+   *
+   * @param int $request_id The request id.
+   *
+   * @return bool
+   * @throws \Exception
+   */
+  public function saveRequestId( int $request_id ): bool {
+
+    $this->request_id = $request_id;
+
+    $sql = 'UPDATE clients_initial_data SET request_id = :request_id WHERE token_hash = :token_hash';
+
+    $db   = static::getDB();
+    $stmt = $db->prepare( $sql );
+
+    $stmt->bindValue( ':request_id', $this->request_id, PDO::PARAM_INT );
     $stmt->bindValue( ':token_hash', $this->token_hash, PDO::PARAM_STR );
 
     if ( $stmt->execute() ) {
@@ -567,6 +603,15 @@ class ClientInitialData extends \Core\Model {
    */
   public function getToken(): string {
     return $this->token;
+  }
+
+  /**
+   * Gets request id
+   *
+   * @return string
+   */
+  public function getRequestId(): string {
+    return $this->request_id;
   }
 
   /**
